@@ -4,7 +4,11 @@ require("console.table");
 
 start();
 
-function start() {
+function start(){
+  loadMainPrompts();
+}
+
+function loadMainPrompts(){
   inquirer
     .prompt([
       {
@@ -14,7 +18,7 @@ function start() {
         choices: [
           {
             name: "View All Deparments",
-            value: "VIEW_DEPARTMENTS",
+            value: "viewDepartments",
           },
           {
             name: "View All Employees",
@@ -44,7 +48,7 @@ function start() {
       }
     ]).then((data) => {
       switch (data.menu) {
-        case "viewDepartments":
+        case "VIEW_DEPARTMENTS":
           viewDepartments();
           break;
         case "viewEmployees":

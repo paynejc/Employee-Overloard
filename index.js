@@ -1,6 +1,9 @@
 const inquirer = require("inquirer");
 const db = require("./db");
 require("console.table");
+
+start();
+
 function start() {
   inquirer
     .prompt([
@@ -11,7 +14,7 @@ function start() {
         choices: [
           {
             name: "View All Deparments",
-            value: "viewDeparments",
+            value: "VIEW_DEPARTMENTS",
           },
           {
             name: "View All Employees",
@@ -35,12 +38,11 @@ function start() {
           },
           {
             name: "Quit",
-            value: "quit",
-          },
-        ],
-      },
-    ])
-    .then((data) => {
+            value: "quit"
+          }
+        ]
+      }
+    ]).then((data) => {
       switch (data.menu) {
         case "viewDepartments":
           viewDepartments();

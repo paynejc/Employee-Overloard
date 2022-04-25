@@ -95,7 +95,7 @@ function addRole() {
       value: id,
     }));
 
-    prompt([
+    inquirer.prompt([
       {
         name: "title",
         message: "What is the name of the role?",
@@ -131,7 +131,7 @@ function viewDepartments() {
 
 // Add a department
 function addDepartment() {
-  prompt([
+  inquirer.prompt([
     {
       name: "name",
       message: "What is the name of the department?",
@@ -162,7 +162,7 @@ function updateEmployeeRole() {
         value: id
       }));
 
-      prompt([
+      inquirer.prompt([
         {
           type: "list",
           name: "employeeId",
@@ -180,7 +180,7 @@ function updateEmployeeRole() {
                 value: id
               }));
 
-              prompt([
+              inquirer.prompt([
                 {
                   type: "list",
                   name: "roleId",
@@ -199,7 +199,7 @@ function updateEmployeeRole() {
 
 // Add an employee
 function addEmployee() {
-  prompt([
+  inquirer.prompt([
     {
       name: "first_name",
       message: "What is the employee's first name?",
@@ -219,7 +219,7 @@ function addEmployee() {
         value: id,
       }));
 
-      prompt({
+      inquirer.prompt({
         type: "list",
         name: "roleId",
         message: "What is the employee's role?",
@@ -238,7 +238,7 @@ function addEmployee() {
 
           managerChoices.unshift({ name: "None", value: null });
 
-          prompt({
+          inquirer.prompt({
             type: "list",
             name: "managerId",
             message: "Who is the employee's manager?",

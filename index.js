@@ -33,6 +33,10 @@ function loadMainPrompts(){
             value: "updateEmployeeRole",
           },
           {
+            name: "Add Department",
+            value: "addDepartment",
+          },
+          {
             name: "Add Employee",
             value: "addEmployee",
           },

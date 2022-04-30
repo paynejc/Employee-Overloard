@@ -19,9 +19,10 @@ SQL Employee Tracker. You will be presented with the following options: view all
 node index.js
 ## Usage
 This is a very simple, straight forward manager. 
+Choosing to view departments, roles, and employees will present you with just that data. However adding or modifying those things will yield different options. You can create new deparments. You can also create new roles but they MUST belong to a deparment. So always make sure that the deparment exist or create it. Creating a role also gives you the option of creating a salary for that role. Then lastly,  you can create a new employee and assign them a role and supervisor. Or you can modify a current employees role. 
 
 ## Contributing
-reach out to me on github or by email. 
+Reach out to me on github or by email. 
 ## Tests
 npm test
 ## Questions
